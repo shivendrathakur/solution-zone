@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hill Climb Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="hud">
+            <div class="hud-item">
+                <div class="label">Distance</div>
+                <div class="value" id="distance">0m</div>
+            </div>
+            <div class="hud-item">
+                <div class="label">Fuel</div>
+                <div class="fuel-container">
+                    <div class="fuel-bar" id="fuelBar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="controls">
+            <button class="control-btn" id="brakeBtn">◀ Brake</button>
+            <button class="control-btn" id="gasBtn">Gas ▶</button>
+        </div>
+        
+        <div class="game-over" id="gameOver">
+            <h1>Game Over!</h1>
+            <p>Distance: <span id="finalDistance">0</span>m</p>
+            <button class="restart-btn" id="restartBtn">Restart</button>
+        </div>
+        
+        <div class="instructions">
+            <p>Use Arrow Keys or Buttons to Control</p>
+            <p>← Brake | Gas →</p>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
